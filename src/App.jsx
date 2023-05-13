@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './components/Cards/Cards';
 import PostForm from './components/PostForm/PostForm';
+import './App.css';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -28,12 +29,16 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Posts</h1>
-      <PostForm createPost={createPost} />
-      {posts.map((post) => (
-        <Card key={post.id} post={post} deletePost={deletePost} />
-      ))}
+    <div className="app">
+      <span>Posts</span>
+      <div className="centered">
+        <PostForm createPost={createPost} />
+        <div className="cards-container">
+          {posts.map((post) => (
+            <Card key={post.id} post={post} deletePost={deletePost} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

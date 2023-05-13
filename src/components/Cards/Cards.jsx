@@ -1,19 +1,8 @@
-import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import './Cards.css';
 
 const Card = ({ post, deletePost }) => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    if (isLoading) {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
-    }
-  }, [isLoading]);
-
   const handleDelete = () => {
-    setIsLoading(true);
     deletePost(post.id);
   };
 
@@ -22,8 +11,8 @@ const Card = ({ post, deletePost }) => {
       <h2>{post.title}</h2>
       <p>UserID: {post.userId}</p>
       <p>{post.body}</p>
-      <button onClick={handleDelete} disabled={isLoading}>
-        {isLoading ? 'Eliminando...' : 'Eliminar'}
+      <button onClick={handleDelete}>
+        Eliminar
       </button>
     </div>
   );

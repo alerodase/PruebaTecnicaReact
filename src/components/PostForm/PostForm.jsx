@@ -1,7 +1,6 @@
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
-
-
+import './PostForm.css';
 
 const PostForm = ({ createPost }) => {
   const { register, handleSubmit, reset, setError, formState: { errors } } = useForm();
@@ -16,19 +15,19 @@ const PostForm = ({ createPost }) => {
   };
 
   return (
-    <div>
+    <div className="post-form">
       <h2>Crear Post</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        <div className="form-field">
           <label>Título:</label>
           <input type="text" {...register('title')} required />
           {errors.title && <span>{errors.title.message}</span>}
         </div>
-        <div>
+        <div className="form-field">
           <label>Usuario ID:</label>
           <input type="number" {...register('userId')} required />
         </div>
-        <div>
+        <div className="form-field">
           <label>Contenido:</label>
           <textarea {...register('body')} required />
         </div>
