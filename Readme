@@ -1,0 +1,22 @@
+
+Esta es una plataforma de visualización de posts que permite a los usuarios administrar y visualizar los posts obtenidos de jsonplaceholder.typicode.com. La aplicación se ha desarrollado utilizando React y sigue las mejores prácticas de desarrollo.
+
+
+Funcionalidad
+La funcionalidad principal de la aplicación es la siguiente:
+
+Visualizar una lista de posts con su título, usuario creador y contenido del texto.
+Crear nuevos posts mediante un formulario.
+Eliminar posts existentes.
+
+
+Diseño e Implementación
+La aplicación se ha diseñado y desarrollado teniendo en cuenta los siguientes aspectos:
+
+Componentes Desacoplados: Se ha implementado un enfoque de componentes totalmente desacoplados, lo que permite que los componentes sean reutilizables y utilizables en diferentes aplicaciones sin acoplarse a un contexto específico o conjunto de datos.
+
+Componetización: Los componentes se han organizado de manera adecuada y modular para mantener el código limpio y legible. Ningún componente supera las 70 líneas y se ha evitado la duplicidad de código.
+
+React Hook Form: Se ha utilizado la librería react-hook-form para gestionar los formularios en la aplicación, lo que nos brinda una forma sencilla y eficiente de manejar la validación y el envío de datos del formulario.
+
+Hooks useEffect y useState: Los hooks useEffect y useState se han utilizado para manejar el estado y los efectos secundarios en los componentes App y PostForm. Esto nos permite actualizar el estado de manera efectiva y realizar acciones específicas en determinados momentos del ciclo de vida del componente.
